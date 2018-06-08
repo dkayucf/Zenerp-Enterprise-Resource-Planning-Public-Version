@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="59px" viewBox="0 0 58 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>113 - Chart Presentation (business, finance, marketing, flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-961.000000, -958.000000)">
+            <g id="Chart-Presentation" transform="translate(961.000000, 958.000000)">
+                <polygon id="Fill-671" fill="#556080" fill-rule="evenodd" points="0 0 58 0 58 6 0 6"></polygon>
+                <polygon id="Fill-672" fill="#ECF0F1" fill-rule="evenodd" points="2 6 56 6 56 48 2 48"></polygon>
+                <path d="M35,43 L35,40" id="Stroke-833" stroke="#8697CB" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M39,43 L39,36" id="Stroke-834" stroke="#F3D55B" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M43,43 L43,38" id="Stroke-835" stroke="#8697CB" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M47,43 L47,31" id="Stroke-836" stroke="#71C285" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M51,43 L51,35" id="Stroke-837" stroke="#8697CB" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M9,38 L19,38 M9,42 L24,42" id="Stroke-838" stroke="#D1D4D1" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M29,21.5 C29,27.299 24.299,32 18.5,32 C12.701,32 8,27.299 8,21.5 C8,15.701 12.701,11 18.5,11 C24.299,11 29,15.701 29,21.5" id="Fill-839" fill="#26B99A" fill-rule="evenodd"></path>
+                <path d="M18.014,11.011 C18.009,11.016 18.005,11.02 18,11.025 L18,21.963 C18,21.984 18.016,22 18.037,22 L28.975,22 C28.98,21.995 28.984,21.991 28.989,21.986 C29.268,15.803 24.197,10.732 18.014,11.011" id="Fill-840" fill="#F3D55B" fill-rule="evenodd"></path>
+                <path d="M38,17 L46,17 M48,12 L51,12 M38,12 L40,12" id="Stroke-841" stroke="#D1D4D1" stroke-width="2" stroke-linecap="round"></path>
+                <circle id="Oval-9" fill="#D1D4D1" fill-rule="evenodd" cx="44" cy="12" r="1"></circle>
+                <circle id="Oval-9" fill="#D1D4D1" fill-rule="evenodd" cx="51" cy="17" r="1"></circle>
+                <path d="M0,48 L58,48 L0,48 Z" id="Path" stroke="#556080" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M29,48 L29,51 L29,48 Z" id="Path" stroke="#556080" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M32,55 C32,56.657 30.657,58 29,58 C27.343,58 26,56.657 26,55 C26,53.343 27.343,52 29,52 C30.657,52 32,53.343 32,55 L32,55 Z" id="Path" stroke="#556080" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

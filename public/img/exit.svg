@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>333 - Exit (interaction, communication, essential, webby)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-963.000000, -841.000000)">
+            <g id="Exit" transform="translate(964.000000, 842.000000)">
+                <path d="M41,35 L53,23 M41,11 L53,23 L34,23" id="Stroke-686" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polyline id="Fill-687" fill="#FFFFFF" fill-rule="evenodd" points="22 46 34 46 34 0 0 0 0 46"></polyline>
+                <polyline id="Stroke-688" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="22 46 34 46 34 0 0 0 0 46"></polyline>
+                <polygon id="Fill-689" fill="#C6E3F8" fill-rule="evenodd" points="22 7 0 0 0 46 22 53"></polygon>
+                <polygon id="Stroke-690" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="22 7 0 0 0 46 22 53"></polygon>
+                <path d="M14,29 L19,31" id="Stroke-691" stroke="#0F81E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Zenerp</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/fullcalendar.print.min.css" media="print" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-colvis-1.5.1/b-flash-1.5.1/b-html5-1.5.1/b-print-1.5.1/cr-1.4.1/fh-3.1.3/r-2.2.1/sl-1.2.5/datatables.min.css"/>
+        <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+        <link rel="stylesheet" href="/css/fullcalendar.min.css">
+        <link rel="stylesheet" href="/css/scheduler.min.css">
+        <link rel="stylesheet" href="/css/intlTelInput.css">
+        <link rel="stylesheet" href="/css/formValidation.min.css">
+        <link rel="stylesheet" href="/css/style.css" media="screen">
+        <link rel="stylesheet" href="/css/printStyle.css" media="print">
+        <script>
+        tinymce.init({
+              selector: '.businessTerms',
+              height: 300,
+              menubar: false,
+              plugins: [
+                'advlist autolink lists link image charmap print preview anchor textcolor',
+                'searchreplace visualblocks code fullscreen',
+                'insertdatetime media table contextmenu paste code help wordcount'
+              ],
+              toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+              content_css: [
+                '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+                '//www.tinymce.com/css/codepen.min.css']
+            });
+        </script>
+    </head>
+    <body class="white">
+        {{#if user}}
+         {{> _dashboardHeader}}
+            {{> _add-btn}}
+        {{else}}
+            {{> _welcomeHeader}}
+        {{/if}}
+   
+            {{#if user}}
+            <main>
+                <div class="container">
+                    {{{body}}} 
+                </div>     
+            </main>
+            {{else}}
+                <main>
+                    {{{body}}}     
+                </main>
+            {{/if}}
+
+ 
+      
+           {{> _footer}}
+
+           
+       
+    <script src="/js/vendors/jquery.min.js"></script>
+    <script src="/js/vendors/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-colvis-1.5.1/b-flash-1.5.1/b-html5-1.5.1/b-print-1.5.1/cr-1.4.1/fh-3.1.3/r-2.2.1/rr-1.2.3/sl-1.2.5/datatables.min.js"></script>
+    <script src="/js/vendors/intlTelInput.min.js"></script>
+    <script src="/js/vendors/utils.js"></script>
+    <script src="/js/vendors/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.3.0/zxcvbn.js"></script>
+    <script src="/js/vendors/fullcalendar.min.js"></script>
+    <script src="/js/vendors/scheduler.min.js"></script>
+    <script src="/js/dependencyInit.js"></script>
+    {{!-- <script src="/js/app.js"></script> --}}
+    <script src="/build/app.bundle.js"></script>
+
+    </body>
+</html>

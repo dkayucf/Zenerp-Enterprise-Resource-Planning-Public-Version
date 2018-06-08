@@ -1,0 +1,37 @@
+
+<div class="loginHero">
+
+    <div class="row">
+    <div class="col s12 m8 l3 loginCol">
+        <div class="card grey lighten-4 hoverable mt-4 mb-4">
+            <div class="card-content">
+              <div class="alert-container">
+                {{> _msg}}  
+              </div>
+                <span class="card-title">Login</span>
+                <form method="post" action="/auth/login">
+                    <div class="row mt-2">
+                        <div class="input-field col s12">
+                            <input type="email" name="email" class="validate" value="{{email}}" required>
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="password" name="password" class="validate" required>
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light  light-blue darken-2 btn-block" type="submit">Sign In</button>
+                </form>
+                <p class="center-align">Forgot Password? <a href="/auth/forgot" class=" light-blue-text text-darken-3">Reset Password<i class="material-icons playArrow">play_arrow</i></a></p>
+            </div>
+            <div class="card-action">
+                <a href="/auth/google" class="btn red darken-1 btn-block googLogin"><i class="fab fa-google left"></i> Login with Google</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+

@@ -1,0 +1,33 @@
+
+  <div class="row mt-4">
+    <div class="col s12 m8 l4 offset-m2 offset-l4">
+        <div class="card grey lighten-4 hoverable">
+            <div class="card-content">
+                <div class="alert-container">
+                    {{> _msg}}  
+                </div>
+                <span class="card-title">Reset Password</span>
+                <form action="/auth/reset/{{token}}" method="post">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input placeholder="At least 6 characters" name="password" type="password" class="validate" value="{{password}}" required>
+                          <label for="password">Password</label>
+                          {{#each errors}}
+                                <span class="helper-text red-text text-darken-3" data-error="wrong">{{text}}</span>
+                          {{else}}
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input type="password" name="password2" class="validate" value="{{password2}}">
+                          <label for="password2">Re-enter Password</label>
+                        </div>
+                      </div>
+                      
+                      <button class="btn waves-effect waves-light btn-block  light-blue darken-2" type="submit">Update Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

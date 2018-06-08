@@ -1,0 +1,114 @@
+
+    <div class="row mt-4 mb-4">
+        <div class="col s12 m12 l8">
+            <div class="card grey lighten-4 hoverable">
+                <div class="card-content">
+                    <span class="card-title">Vendors</span>
+                    <table id="vendorsTable" class="mdl-data-table dt-responsize">
+                        <thead>
+                            <tr>
+                                <th class="center-align">Name</th>
+                                <th class="center-align">Email</th>
+                                <th class="center-align">Phone</th>
+                                <th class="center-align">Address</th>
+                                <th class="center-align"></th>
+                                <th class="center-align"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {{#if vendorID}}
+                            {{#each allVendors}}
+                                <tr>
+                                    <td class="center-align">{{vendorName}}</td>
+                                    <td class="center-align">{{truncate vendorEmail 15}}</td>
+                                    <td class="center-align">{{vendorPhone}}</td>
+                                    <td class="center-align">{{truncate vendorAddress 20}}</td>
+                                    <td class="center-align"><a href="/vendors/{{id}}"><i class="fas fa-edit  light-blue-text text-darken-3"></i></a></td>
+                                    <td class="center-align"><a href="/vendors/delete/{{id}}"><i class="fas fa-trash-alt red-text text-darken-4"></i></a></td>
+                                </tr>
+                            {{else}}
+                                
+                            {{/each}}
+                        {{else}}
+                            {{#each vendors}}
+                                <tr>
+                                    <td class="center-align">{{vendorName}}</td>
+                                    <td class="center-align">{{truncate vendorEmail 15}}</td>
+                                    <td class="center-align">{{vendorPhone}}</td>
+                                    <td class="center-align">{{truncate vendorAddress 20}}</td>
+                                    <td class="center-align"><a href="/vendors/{{id}}"><i class="fas fa-edit  light-blue-text text-darken-3"></i></a></td>
+                                    <td class="center-align"><a href="/vendors/delete/{{id}}"><i class="fas fa-trash-alt red-text text-darken-4"></i></a></td>
+                                </tr>
+                            {{else}}
+                                
+                            {{/each}}
+                        {{/if}}
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m12 l4">
+            <div class="card grey lighten-4 hoverable">
+                {{#if vendorID}}
+                    <form action="/vendors/update/{{vendorID}}?_method=PUT" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+                {{else}}
+                    <form method="post" action="/vendors">
+                {{/if}}
+                    <div class="card-content">
+                        <div class="alert-container">
+                            {{> _msg}}  
+                        </div>
+                        <span class="card-title">Add Vendor</span>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" name="vendorName" class="validate vendorName" value="{{vendorName}}">
+                                <label for="vendorName">Vendor Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type="email" name="vendorEmail" class="validate vendorEmail" value="{{vendorEmail}}">
+                                <label for="vendorEmail">Email</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="tel" name='vendorPhone' id="phone" class="validate vendorPhone" value="{{vendorPhone}}">
+                                <label for="vendorPhone">Phone Number</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type="text" name="vendorAddress" class="validate vendorAddress" value="{{vendorAddress}}">
+                                <label for="vendorAddress">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="vendorCity" class="validate vendorCity" value="{{vendorCity}}">
+                                <label for="vendorCity">City</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                    <input type="text" id="vendorState" name="vendorState" class="vendorState states" value="{{vendorState}}">
+                                    <label for="vendorState">State</label>
+                                </div>
+                            <div class="input-field col s6">
+                                <input type="number" name="vendorZip" class="validate vendorZip"  value="{{vendorZip}}">
+                                <label for="vendorZip">Zip Code</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        {{#if vendorID}}
+                            <button class="btn waves-effect waves-light  light-blue darken-2 btn-block" type="submit">UPDATE VENDOR</button>
+                        {{else}}
+                            <button class="btn waves-effect waves-light  light-blue darken-2 btn-block" type="submit">ADD VENDOR</button>
+                        {{/if}}
+                    </div>
+                </form>
+            </div>
+        </div>     
+    </div>
+

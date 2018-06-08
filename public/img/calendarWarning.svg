@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="57px" height="58px" viewBox="0 0 57 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>256 - Calendar Warning (interaction, communication, interface, flat)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-601.000000, -4017.000000)">
+            <g id="Calendar-Warning" transform="translate(601.000000, 4017.000000)">
+                <polyline id="Fill-719" fill="#F15465" points="46 4 46 8 39 8 39 4 15 4 15 8 8 8 8 4 0 4 0 15 54 15 54 4 46 4"></polyline>
+                <polyline id="Fill-720" fill="#EFECDE" points="8 15 0 15 0 58 54 58 54 15 8 15"></polyline>
+                <path d="M37,22 L8,22 L8,51 L46,51 L46,22 L37,22 L37,22 Z M28,24 L35,24 L35,31 L28,31 L28,24 Z M28,33 L35,33 L35,40 L28,40 L28,33 Z M19,33 L26,33 L26,40 L19,40 L19,33 Z M19,24 L26,24 L26,31 L19,31 L19,24 Z M10,24 L17,24 L17,31 L10,31 L10,24 Z M10,33 L17,33 L17,40 L10,40 L10,33 Z M10,42 L17,42 L17,49 L10,49 L10,42 Z M19,42 L26,42 L26,49 L19,49 L19,42 Z M28,42 L35,42 L35,49 L28,49 L28,42 Z M37,42 L44,42 L44,49 L37,49 L37,42 Z M37,33 L44,33 L44,40 L37,40 L37,33 Z M37,24 L44,24 L44,31 L37,31 L37,24 Z" id="Fill-721" fill="#D5D0BB"></path>
+                <polygon id="Fill-722" fill="#36495E" points="8 0 15 0 15 8 8 8"></polygon>
+                <polygon id="Fill-723" fill="#36495E" points="39 0 46 0 46 8 39 8"></polygon>
+                <polygon id="Fill-724" fill="#7F6E5D" points="19 33 26 33 26 40 19 40"></polygon>
+                <path d="M55.761,57 L32.07,57 C31.115,57 30.52,55.964 31.001,55.139 L42.846,34.833 C43.324,34.014 44.507,34.014 44.984,34.833 L56.83,55.139 C57.311,55.964 56.716,57 55.761,57" id="Fill-2446" fill="#F0C41A"></path>
+                <path d="M44,50 C43.448,50 43,49.552 43,49 L43,41 C43,40.448 43.448,40 44,40 C44.552,40 45,40.448 45,41 L45,49 C45,49.552 44.552,50 44,50" id="Fill-2447" fill="#FFFFFF"></path>
+                <path d="M44,54 C43.74,54 43.48,53.89 43.29,53.71 C43.11,53.52 43,53.26 43,53 C43,52.74 43.11,52.48 43.29,52.29 C43.67,51.92 44.33,51.92 44.71,52.29 C44.89,52.48 45,52.74 45,53 C45,53.26 44.89,53.52 44.71,53.71 C44.52,53.89 44.27,54 44,54" id="Fill-2448" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

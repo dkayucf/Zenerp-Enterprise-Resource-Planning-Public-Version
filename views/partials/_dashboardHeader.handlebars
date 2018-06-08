@@ -1,0 +1,40 @@
+
+<div class="navbar">
+    {{#if user}}
+        <nav class="navbarBackEnd">
+    {{else}}
+        <nav class=" navbar">
+    {{/if}}
+    
+        <div class="container nav-container">
+            <div class="nav-wrapper">
+
+                    <a href="/" class="brand-logo welcomeLogo2">ZENERP</a>
+
+                    <a href="#" data-target="slide-out" class="sidenav-trigger "><i class="fas fa-bars"></i></a>
+
+                <!--RIGHT NAV-->
+                        
+                    {{#if user}}
+                        
+                        <ul class="right hide-on-small-only ">
+                            <li><p class="light-blue-text darken-4 mt-0 mr-2 salutation">Welcome, {{user.firstName}} {{user.lastName}}</p></li>
+                            <li><a href="/notifications"><img src="/img/bell.svg" alt="notifications" class="navIcon" height="26" width="26"><span class="notification">5</span></a></li>
+                            <li><a href="/employees/edit?employeeID={{user._id}}" class="black-text center-align"><img src="/img/profile.svg" class="navIcon" alt="account settings" height="26" width="26"></a></li>
+                            <li><a href="/auth/logout" class="black-text center-align"><img src="/img/exit.svg" class="navIcon" alt="logout" height="26" width="26"><span class="ml-2 logoutLink light-blue-text darken-4">Log Out</span></a></li> 
+                        </ul> 
+                        
+                    {{else}}
+                        <ul class="right hide-on-small-only">
+                            <li><a href="/features">Features</a></li>
+                            <li><a href="/subscriptions">Subscriptions</a></li>
+                            <li><a href="/auth/register" class="btn registerBtn">Sign Up</a></li>
+                            <li><a href="/auth/login" class="waves-effect waves-light btn  light-blue darken-2 loginNavBtn">Login</a></li>
+                        </ul>    
+                    {{/if}}
+                <!--SIDE MENU-->
+                {{> _sidebarNav}}
+            </div>
+        </div>
+    </nav>    
+</div>

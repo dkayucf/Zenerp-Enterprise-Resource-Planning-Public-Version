@@ -1,0 +1,1017 @@
+@font-face {
+	font-family: 'Conv_Fairview_Regular';
+	src: url('fonts/Fairview_Regular.eot');
+	src: local('☺'), url('../fonts/Fairview_Regular.woff') format('woff'), url('../fonts/Fairview_Regular.ttf') format('truetype'), url('../fonts/Fairview_Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+  main {
+    flex: 1 0 auto;
+   
+  }
+
+.container {
+    margin-left: 19%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+    margin-top: 23px;
+    margin-bottom: 11.5px;
+}
+
+a {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+nav i {
+    font-size: 21px;
+    margin-right: 5px;
+}
+
+
+nav ul a {
+    font-size: 1.5rem;
+    padding: 10px 10px 0 10px;
+    letter-spacing: 3px;
+    color: #424242;
+}
+
+i.fas.fa-sort-down {
+    font-size: 10px;
+}
+
+a{
+    color: #0288d1;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #0288d1;
+    -webkit-box-shadow: 0 1px 0 0 #0288d1;
+    box-shadow: 0 1px 0 0 #0288d1;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    background-color: #0288d108;
+}
+
+input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #0288d1;
+}
+
+[type="checkbox"]:checked+span:not(.lever):before {
+    border-right: 2px solid #0288d1;
+    border-bottom: 2px solid #0288d1;
+}
+
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid #424242;
+} 
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: #0288d1;
+}
+
+.select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid #0288d1;
+}
+
+:focus {
+    outline: none;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    height: 2.75rem;
+}
+
+.input-field .prefix {
+    top: 1.25rem!important;
+}
+
+.input-field .prefix.active {
+    color: #0288d1;
+}
+
+button:focus {
+    background-color: #0288d1;
+}
+
+.input-field>label {
+    top: -15px;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.input-field>label:not(.label-icon).active{
+    transform: translateY(-2px) scale(0.8);
+    transform-origin: 0 0;
+}
+
+.card-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/*------------MARGIN & PADDING HELPERS----------------*/
+.m-0{
+    margin: 0!important;
+}
+
+.mr-1{
+    margin-right: .5rem!important;
+}
+
+.mr-2{
+    margin-right: 1rem!important;
+}
+
+.mr-3{
+    margin-right: 2rem!important;
+}
+
+.mr-4{
+    margin-right: 4rem!important;
+}
+
+.mr-5{
+    margin-right: 8rem!important;
+}
+
+.ml-1{
+    margin-left: .5rem!important;
+}
+
+.ml-2{
+    margin-left: 1rem!important;
+}
+
+.ml-3{
+    margin-left: 2rem!important;
+}
+
+.ml-4{
+    margin-left: 4rem!important;
+}
+
+.ml-5{
+    margin-left: 8rem!important;
+}
+
+.mb-0 {
+    margin-bottom: 0!important;
+}
+
+.mb-1{
+    margin-bottom: .5rem!important;
+}
+
+.mb-2{
+    margin-bottom: 1rem!important;
+}
+
+.mb-3{
+    margin-bottom: 2rem!important;
+}
+
+.mb-4{
+    margin-bottom: 4rem!important;
+}
+
+.mb-5{
+    margin-bottom: 8rem!important;
+}
+
+.mt-0{
+    margin-top: 0rem!important;
+}
+
+.mt-1{
+    margin-top: .5rem!important;
+}
+
+.mt-2{
+    margin-top: 1rem!important;
+}
+
+.mt-3{
+    margin-top: 2rem!important;
+}
+
+.mt-4{
+    margin-top: 4rem!important;
+}
+
+.mt-5{
+    margin-top: 8rem!important;
+}
+
+.pr-1{
+    padding-right: .5rem!important;
+}
+
+.pr-2{
+    padding-right: 1rem!important;
+}
+
+.pr-3{
+    padding-right: 2rem!important;
+}
+
+.pr-4{
+    padding-right: 4rem!important;
+}
+
+.pr-5{
+    padding-right: 8rem!important;
+}
+
+.pl-1{
+    padding-left: .5rem!important;
+}
+
+.pl-2{
+    padding-left: 1rem!important;
+}
+
+.pl-3{
+    padding-left: 2rem!important;
+}
+
+.pl-4{
+    padding-left: 4rem!important;
+}
+
+.pl-5{
+    padding-left: 8rem!important;
+}
+
+.pb-1{
+    padding-bottom: .5rem!important;
+}
+
+.pb-2{
+    padding-bottom: 1rem!important;
+}
+
+.pb-3{
+    padding-bottom: 2rem!important;
+}
+
+.pb-4{
+    padding-bottom: 4rem!important;
+}
+
+.pb-5{
+    padding-bottom: 8rem!important;
+}
+
+.pt-1{
+    padding-top: .5rem!important;
+}
+
+.pt-2{
+    padding-top: 1rem!important;
+}
+
+.pt-3{
+    padding-top: 2rem!important;
+}
+
+.pt-4{
+    padding-top: 4rem!important;
+}
+
+.pt-5{
+    padding-top: 8rem!important;
+}
+/*---------------------ALERTS ------------------------*/
+.alert {
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+
+.form-control {
+    border: 1px solid #00000017;
+    border-radius: 3px;
+    margin-top: 2rem;
+    padding: 3rem!important;
+}
+
+
+.invoiceCard{
+    margin-top: 0;
+}
+
+.input-field{
+    margin: .5rem 0;
+}
+
+.row{
+    margin-bottom: 0;
+}
+
+#logoDropZone{
+    border: 1px dashed #000000;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 3rem;
+    margin: 2rem 0;
+}
+
+/*----------------BUTTONS---------------*/
+.btn-block{
+    display: block;
+    width: 100%;
+}
+
+.googLogin{
+    margin: 10px 0px;
+}
+
+.payLogin{
+    margin: 10px 0px;
+}
+
+
+.registerBtn{
+    background-color: transparent;
+    border: 2px solid #424242;
+    border-radius: 3px;
+    text-transform: lowercase;
+    line-height: 29px;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    outline: 0;
+}
+
+.registerBtn:hover{
+    background-color: #29b6f6;
+}
+
+.loginNavBtn {
+    padding-top: 3px;
+    text-transform: lowercase;
+    line-height: 29px;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    outline: 0;
+}
+
+
+
+.playArrow{
+    font-size:14px;
+    position: relative;
+    top: 3px;
+    margin-top: 2rem;
+}
+
+#heroRegisterBtn{
+    margin-top:1rem;
+}
+
+button.dt-button, div.dt-button, a.dt-button{
+    background-image: none;
+    border: none;
+
+}
+
+button.dt-button:hover:not(.disabled), div.dt-button:hover:not(.disabled), a.dt-button:hover:not(.disabled) {
+     border: none; 
+     background-color: none; 
+     background-image: none; 
+    background-image: none;
+    background-image: none;
+    background-image: none;
+     background-image: none; 
+
+}
+/*-----------------PHONE INPUT----------------*/
+.intl-tel-input.allow-dropdown input, .intl-tel-input.allow-dropdown input[type=text], .intl-tel-input.allow-dropdown input[type=tel], .intl-tel-input.separate-dial-code input, .intl-tel-input.separate-dial-code input[type=text], .intl-tel-input.separate-dial-code input[type=tel] {
+    padding-right: 0px;
+    width: 91%;
+}
+
+label.phoneLabel {
+    float: left;
+    top: -25px;
+}
+
+.intl-tel-input {
+    width: 100%;
+}
+
+
+/*-------------MAIN NAVBAR------------*/
+.nav-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img.logoImg {
+    width: 65%;
+    margin-top: 10px;
+}
+
+.navbar nav {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.salutation {
+    letter-spacing: 2px;
+}
+
+
+nav {
+    background-color: #ee6e7300;
+}
+
+nav a {
+    color: #03a9f4;
+}
+
+nav .sidenav-trigger {
+    position: fixed;
+    left: 275px;
+}
+
+.logoutLink {
+    position: relative;
+    bottom: 10px;
+}
+
+.navbar {
+    /* box-shadow: inset 0px -2px 1px 0px #fff; */
+    font-family: 'Conv_Fairview_Regular'; 
+     font-size: 2rem; 
+     background-image: linear-gradient(to right top, rgb(59, 188, 247), rgb(140, 216, 250));
+}
+
+.navbarBackEnd{
+    font-family: 'Conv_Fairview_Regular'; 
+     font-size: 1.5rem; 
+}
+
+nav {
+    box-shadow: none;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+nav .brand-logo {
+    font-size: 2.75rem;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    margin-top: .75rem;
+}
+
+.welcomNav {
+    margin-right: 5rem;
+}
+
+.welcomeNavLink{
+    padding: 0 10px;
+}
+
+nav .nav-wrapper i {
+    margin-left: -40px;
+    padding-top: 8px;
+
+}
+
+li.accountli {
+    width: 100%;
+}
+
+.welcomeLogo {
+    margin-left: 13rem;
+    text-align: unset!important;
+    width: 25%!important;
+    margin-top: 0!important;
+}
+
+.welcomeLogo2 {
+    color: #000!important;
+    width: 25% !important;
+    text-align: unset!important;
+    position: fixed!important;
+    left: 100px;
+}
+
+.notification {
+    position: absolute;
+    top: 17px;
+    border: 1px solid #fff;
+    font-size: 15px;
+    background: #f44336;
+    color: #fff;
+    min-width: 20px;
+    padding: 0px 2px 0 5px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 19px;
+    vertical-align: middle;
+    display: block;
+    margin-left: 14px;
+}
+
+
+
+/*---------SIDE NAVBAR--------------*/
+.closeBtn {
+    position: relative;
+    left: 45px;
+}
+
+.closeIcon {
+    position: absolute;
+    left: 11px;
+    top: 6px;
+    font-size: 35px!important;
+}
+
+.sidenav li>a>i, .sidenav li>a>[class^="mdi-"], .sidenav li>a li>a>[class*="mdi-"], .sidenav li>a>i.material-icons {
+    line-height: 32px;
+}
+.sidenav li>a {
+    color: #ffffff;
+    font-size: 27px;
+}
+
+i.fas.fa-arrow-left {
+    position: relative;
+    bottom: 8px;
+    left: 14px;
+    font-size: 33px;
+}
+
+.sidenav li>a>i {
+    color: #ffffff;
+    line-height: 53px;
+}
+
+.sidenav {
+    position: fixed;
+}
+
+.sidenav-overlay {
+    display: none!important;
+}
+
+.sidenav .collapsible-header, .sidenav.fixed .collapsible-header {
+    font-size: 24px;
+    font-weight: 500;
+    width: 100%;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+}
+
+.sidenav {
+    width: 250px;
+}
+
+.subMenu {
+    text-align: center;
+}
+
+.sidenavLogo {
+    width: 150%;
+    position: relative;
+    top: 25px;
+    right: 25px;
+}
+
+.collapsible-header i {
+    width: 1rem;
+    font-size: 18px;
+    margin-right: 3rem;
+}
+
+/*-------------FEATURES---------------*/
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.features {
+    margin-bottom: 0;
+    padding: 1rem 0;
+}
+
+.features_card {
+    margin-left: 0!important;
+    margin-top: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.features_heading{
+    position: relative;
+    top: 2rem;
+    z-index: 99;
+}
+
+.featureCircle {
+    width: 300px!important;
+    margin-top: 2rem;
+}
+
+.card .card-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*--------------LOGIN ROUTE--------------*/
+
+
+.loginCol {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%!important;
+}
+
+.loginHero {
+    height: 75vh;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(196, 196, 196, 0.9)), to(rgba(80, 81, 81, 0.9))),url(../img/officeDesk.jpg);
+    background-image: linear-gradient(to right bottom, rgba(255, 254, 254, 0.9), rgba(243, 243, 243, 0.9)),url(../img/officeDesk.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+/*--------------------REGISTER ROUTE-------------*/
+.registerHero {
+    height: 100%;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(196, 196, 196, 0.9)), to(rgba(80, 81, 81, 0.9))),url(../img/aerial-business-computer.jpg);
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),url(../img/aerial-business-computer.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+
+/*-------------PRICE TEARS---------------*/
+.card-action.priceTier-feature {
+    padding: 5px 24px;
+}
+
+
+/*----------------APP VIEW----------------*/
+.app-view {
+    margin: 0 auto;
+    height: auto;
+	background: url('../img/background.jpg') no-repeat center center, -webkit-linear-gradient(top,rgba(242, 242, 247, 1),rgba(255, 255, 255, 1));
+	background: url('../img/background.jpg') no-repeat center center, linear-gradient(to bottom,rgba(242, 242, 247, 1),rgba(255, 255, 255, 1));
+    background-size: cover;
+}
+
+
+
+
+/*---------------HERO HEADER----------------*/
+
+.heroLogo{
+    font-family: 'Conv_Fairview_Regular';      
+}
+
+.heroSection{
+    height: 85vh;
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+    background-image: linear-gradient(to right bottom, rgba(3,169,244,0.8), rgba(129,212,250,0.8));
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+.laptopContainer {
+    float: right;
+    overflow: hidden;
+}
+
+img.laptopImage {
+    width: 65%;
+    float: right;
+    position: relative;
+    z-index: 10;
+    top: 6rem;
+    left: 11rem;
+}
+
+.ctaContainer {
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    z-index: 99;
+    top: 30%;
+    left: 2rem;
+}
+
+
+
+/*----------------------BUSINESS PROFILE--------------------*/
+
+.profileLogo {
+    display: flex;
+    justify-content: center;
+}
+
+.mce-notification.mce-has-close {
+    padding-right: 15px;
+    display: none;
+}
+
+/*---------------ADD INVOICE----------------------*/
+.card .card-content .card-title {
+    display: inline;
+}
+
+.input-field .prefix {
+    font-size: 1.5rem;
+    top: 1rem;
+    left: 1.75rem;
+}
+
+.invoiceTerms {
+    font-size: 11px;
+}
+
+.vendorSelect {
+    margin-bottom: 2rem;
+    background-color: rgba(232, 232, 232, 0.9);
+    border: 1px solid #0288d199;
+}
+
+/*--------------------VIEW INVOICES----------------*/
+.stamp{
+    width: 65px;
+}
+
+/*---------------------------EMPLOYEES ------------------------*/
+#employeesTable {
+    margin: 0;
+    width: 100%!important;
+}
+
+
+/*-------------------------SCHEDULE BUILDER----------------------*/
+.fc-license-message {
+    display: none;
+}
+
+#storeNameSelect {
+    margin-bottom: 2rem;
+    background-color: rgba(232, 232, 232, 0.9);
+    border: 1px solid #0288d199;
+}
+
+.closeone {
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 9;
+    margin-top: 4px;
+}
+
+.draftStatusBtn {
+    color: black!important;
+    font-weight: bold;
+    background: repeating-linear-gradient(
+      45deg,
+      #2e7bf7,
+      #2e7bf7 10px,
+      #7faefa 10px,
+      #7faefa 20px
+    );
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.publishStatusBtn {
+    padding: 0 19px;
+    background-color: #2e7bf7;
+}
+
+.updateStatus {
+    background-color: #2e7bf7;
+}
+
+.FOHDraftShift{
+    color: black!important;
+    background: repeating-linear-gradient(
+      45deg,
+      #f7992e,
+      #f7992e 10px,
+      #fac17f 10px,
+      #fac17f 20px
+    );
+}
+
+.draftShift{
+    color: black!important;
+    background: repeating-linear-gradient(
+      45deg,
+      #2e7bf7,
+      #2e7bf7 10px,
+      #7faefa 10px,
+      #7faefa 20px
+    );
+}
+
+.btn.disabled, .disabled.btn-large, .disabled.btn-small, .btn-floating.disabled, .btn-large.disabled, .btn-small.disabled, .btn-flat.disabled, .btn:disabled, .btn-large:disabled, .btn-small:disabled, .btn-floating:disabled, .btn-large:disabled, .btn-small:disabled, .btn-flat:disabled, .btn[disabled], [disabled].btn-large, [disabled].btn-small, .btn-floating[disabled], .btn-large[disabled], .btn-small[disabled], .btn-flat[disabled] {
+    pointer-events: none;
+    background-color: #2e7bf7 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: black !important;
+    opacity: .5;
+}
+
+.commentCard{
+    display:none;
+}
+
+.card-after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0, 0, 0, .6);
+    z-index: 9;
+}
+
+.loader {
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 75px;
+    height: 75px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    display:none;
+    transform: translate(-50%, -50%);
+}
+
+.schedStatLoader{
+    left: 35%;
+}
+
+.fc-timeline-event .fc-content {
+    display: inline;
+}
+
+/*----------------------SCHEDULE REQUEST------------------*/
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: #0288d124;
+}
+
+.tabs .indicator {
+    background-color: #3498db;
+}
+
+.schedReqForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timepicker-digital-display {
+    background-color: #0288d1;
+}
+
+.timepicker-canvas line {
+    stroke: #0288d1;
+}
+
+.timepicker-canvas-bg {
+    fill: #0288d1;
+}
+
+.timepicker-canvas-bearing {
+    fill: #0288d1;
+}
+
+.timepicker-close {
+    color: #0288d1;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+table#scheduleRequestsTable {
+    font-size: 12px;
+}
+
+
+
+/*---------------INVOICE PERSPECTIVE SECTION-------------*/
+img.invPerspective {
+    width: 500px;
+    position: relative;
+    right: 80px;
+    bottom: 40px;
+}
+
+section.invoice-perspective {
+    padding: 3rem 0rem;
+}
+
+.invoice-perspective__subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+/*-----------------------Modals--------------------*/
+/* .modal {
+    width: 31%;
+} */
+
+.datepicker-date-display {
+    background-color: #0288d1;
+    color: #424242;
+}
+
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+    color: #0288d1;
+}
+
+.datepicker-table td.is-today {
+    color: #0288d1;
+}
+
+.datepicker-table td.is-selected {
+    background-color: #424242;
+}
+
+@media only screen and (min-width: 993px){
+    .container {
+        width: 78%;
+    }
+}
+
+
+@media only screen and (max-width: 992px){
+    nav .brand-logo {
+        left: 33%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    img.logoImg {
+        margin-top: 12px;
+    }
+}
+
+@media only screen and (min-width: 993px){
+    nav a.sidenav-trigger {
+        display: block;
+    }
+}

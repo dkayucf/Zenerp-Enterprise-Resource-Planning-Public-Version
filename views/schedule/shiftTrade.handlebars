@@ -1,0 +1,78 @@
+<form action="/schedules/tradeShift" method="POST">
+    <div class="row">
+        <div class="col l5">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title mb-2">Shift Trader</span><br>
+                    <label for="">(Person Initiating Trade Request)</label>
+                        <div class="row mt-2">
+                            <div class="col s12 m-0">
+                                <div class="input-field">
+                                    <p>Shift Trade Initiated By</p>
+                                        <input type="text" data-weekStart="{{weekStart}}" data-weekEnd="{{weekEnd}}" value="{{user.firstName}} {{user.lastName}}" disabled>
+                                        <input type="hidden" id="traderName" name="traderID" data-weekStart="{{weekStart}}" data-weekEnd="{{weekEnd}}" value="{{user._id}}">
+                                        <input type="hidden" id="traderShiftID" name="traderShiftID" value="{{traderShiftID}}"> 
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col s6 m-0">
+                                <div class="input-field">
+                                    <p>Start Date/Time</p>
+                                        <input type="text"  value="{{traderShiftStart}}" disabled> 
+                                        
+                                </div>
+                            </div>
+                            
+                            <div class="col s6 m-0">
+                                <div class="input-field">
+                                    <p>End Date/Time</p>
+                                        <input type="text" value="{{traderShiftEnd}}" disabled> 
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="col l5">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Shift Tradee</span><br>
+                        <label for="">(Person Receiving Trade Request)</label>
+                            <div class="row mt-2">
+                            <div class="col s12 m-0">
+                                <div class="input-field">
+                                    <p>Trade Shift with...</p>
+                                    <select name="tradeeID" id="tradeeName" class="browser-default">
+                                        <option value="">Select Employee...</option>
+                                        {{#each storeEmployees}}
+                                            <option value="{{_id}}">{{firstName}} {{lastName}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col s12 m-0">
+                                <div class="input-field">
+                                    <p>Tradee Shift being requested</p>
+                                    <select name="tradeeShiftID" id="tradeeShift" class="browser-default">
+                                        <option value="">Select Shift...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col s12 m-0">
+                                <div class="input-field">
+                                    <p>Comments</p>
+                                    <input type="text" name="traderComments" id="tradeComments">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn blue mt-2">Send Request</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</form>  

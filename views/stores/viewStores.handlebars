@@ -1,0 +1,130 @@
+{{#if user.isOwner}}
+
+    <div class="row mt-4 mb-4">
+        <div class="col s12 m12 l8">
+            <div class="card grey lighten-4 hoverable">
+                <div class="card-content">
+                    <span class="card-title">Business Store Locations</span>
+                    <table id="businessLocationsTable" class="mdl-data-table">
+                        <thead>
+                            <tr>
+                                <th class="center-align">Store Number</th>
+                                <th class="center-align">Name</th>
+                                <th class="center-align">Email</th>
+                                <th class="center-align">Phone</th>
+                                <th class="center-align">Address</th>
+                                <th class="center-align">Departments</th>
+                                <th class="center-align"></th>
+                                <th class="center-align"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="businessLocationsTable">
+                        {{#each locations}}
+                            <tr>
+                                <td class="center-align">{{storeNumber}}</td>
+                                <td class="center-align">{{truncate storeName 10}}</td>
+                                <td class="center-align">{{truncate storeEmail 15}}</td>
+                                <td class="center-align">{{storePhone}}</td>
+                                <td class="center-align">{{truncate storeAddress 15}}</td>
+                                <td class="center-align">
+                                    {{#each departments}}
+                                       <p>{{departmentName}}</p> 
+                                    {{/each}}
+                                </td>
+                                <td class="center-align"><a href="/stores/{{id}}"><i class="fas fa-edit  light-blue-text text-darken-3"></i></a></td>
+                                <td class="center-align"><a href="/stores/delete/{{id}}"><i class="fas fa-trash-alt red-text text-darken-4"></i></a></td>
+                            </tr>
+                        {{else}}
+                            
+                        {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col s12 m12 l4">
+            <div class="card grey lighten-4 hoverable">
+                {{#if selectedStore.id}}
+                    <form action="/stores/update/{{selectedStore.id}}?_method=PUT" method="post">
+                        <input type="hidden" name="_method" value="PUT">
+                {{else}}
+                        <form method="post" action="/stores">
+                {{/if}}
+                    <div class="card-content">
+                        <div class="alert-container">
+                            {{> _msg}}  
+                        </div>
+                        <span class="card-title">Add Store Locations</span>
+                        <div class="row mt-2">
+                            <div class="input-field col s6">
+                                <input type="text" name="storeName" class="validate storeName" value="{{selectedStore.storeName}}">
+                                <label for="storeName">Store Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="number" name="storeNumber" class="validate storeNumber" value="{{selectedStore.storeNumber}}">
+                                <label for="storeNumber">Store Number</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type="email" name="storeEmail" class="validate storeEmail" value="{{selectedStore.storeEmail}}">
+                                <label for="storeEmail">Email</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="tel" id="phone" name='storePhone' class="validate storePhone" value="{{selectedStore.storePhone}}">
+                                <label for="storePhone">Phone Number</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type="text" name="storeAddress" class="validate storeAddress" value="{{selectedStore.storeAddress}}">
+                                <label for="storeAddress">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="storeCity" class="validate storeCity" value="{{selectedStore.storeCity}}">
+                                <label for="storeCity">City</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type="text" id="storeState" name="storeState" class="states" value="{{selectedStore.storeState}}">
+                                <label for="storeState">State</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="number" name="storeZip" class="validate storeZip"  value="{{selectedStore.storeZip}}">
+                                <label for="storeZip">Zip Code</label>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="fas fa-percent prefix"></i>
+                                <input type="number" name="storeSalesTax" class="validate storeSalesTax" step=".01" value="{{selectedStore.storeSalesTax}}">
+                                <label for="taxRate">Tax Rate</label>
+                            </div>
+                        </div> 
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select multiple name="storeDepartments">
+                                <option value="" disabled>Choose Departments</option>
+                                    {{#each allDepartments}}
+                                        <option value="{{_id}}" selected>{{departmentName}}</option>
+                                    {{/each}}       
+                                </select>
+                                <label><b>Assign Departments to this New Store Location<b></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        {{#if selectedStore.id}}
+                            <button class="btn waves-effect waves-light  light-blue darken-2 btn-block" type="submit">UPDATE STORE LOCATION</button>
+                        {{else}}
+                            <button class="btn waves-effect waves-light  light-blue darken-2 btn-block" type="submit">ADD STORE LOCATION</button>
+                        {{/if}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{{/if}}

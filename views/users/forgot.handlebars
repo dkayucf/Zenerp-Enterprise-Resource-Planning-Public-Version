@@ -1,0 +1,45 @@
+
+<div class="container mt-4">
+    <div class="row">
+    <div class="col s12 m8 l4 offset-m2 offset-l4">
+        <div class="card grey lighten-4 hoverable">
+            <div class="card-content">
+              <div class="alert-container">
+                {{> _msg}}  
+              </div>
+                <span class="card-title">Forgot Password</span>
+                <form method="post" action="/auth/forgot">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="email" name="email" class="validate" value="{{email}}" required>
+                            <label for="email">Email</label>
+                            <span class="helper-text">Submit email address to recieve password reset link.</span>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light  light-blue darken-2 btn-block" type="submit">Reset Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+<!--
+<script src='https://www.paypalobjects.com/js/external/api.js'></script>
+<script>
+paypal.use( ['login'], function (login) {
+  login.render ({
+    "appid":"AV-lbJPYBfSngCUQUoOzlcHR420fzesAUqEkrxiwl6NvVhkgGrVYEcG7cUC7_UeZ22egZt4ouKoKN2k5",
+    "authend":"sandbox",
+    "scopes":"openid profile email address phone https://uri.paypal.com/services/invoicing",
+    "containerid":"lippButton",
+    "locale":"en-us",
+    "returnurl":"http://localhost:5000/auth/paypal/callback"
+  });
+});
+</script>
+-->

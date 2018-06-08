@@ -1,0 +1,10 @@
+{{#if success}}
+        <div class="alert green lighten-2">{{ this.msg }}</div>
+{{/if}}
+
+
+{{#if errors}}
+    {{#each errors }}
+        <div class="alert red lighten-2">{{ this.msg }}</div>
+    {{/each}}
+{{/if}}

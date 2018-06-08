@@ -1,0 +1,54 @@
+@media print {
+    .sidenav{
+        display: none;
+    }
+
+    .scheduleStatusCard{
+        display: none;
+    }
+
+    .fc-license-message{
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .managersCalendar{
+        width: 2000px;
+    }
+
+    .closeone {
+        display:none;
+    }
+
+    .scheduleCard{
+        width: 1000px;
+    }
+
+    .container {
+        margin-left: 0;
+    }
+
+    .btn-floating {
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .card .card-title {
+        display: none;
+    }
+
+    .scheduleReqShift{
+        display: none;
+    }
+
+ }

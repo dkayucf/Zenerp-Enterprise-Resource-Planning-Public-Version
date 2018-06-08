@@ -1,0 +1,93 @@
+<ul class="sidenav sidenav-fixed grey darken-3 text-white collapsible" id="slide-out">
+                    <div class="logoContainer">
+                        <a href="/" class="brand-logo">ZENERP</a>
+                    </div>
+                            {{#if user}}
+                                <li><a class="btn-floating btn-large waves-effect waves-light  light-blue darken-2 sidenav-close right closeBtn" href="#"><i class="fas fa-arrow-left"></i></a></li>
+                                {{#ifCond user.isOwner '||' user.isManager}}
+                                    <li class="collapseli">
+                                        <div class="collapsible-header mb-2"><img src="/img/store.svg" class="iconFixed" alt="store front" height="26" width="26"> Business</div>
+                                                    <div class="collapsible-body grey lighten-2">
+                                                        <a href="/account/business-profile/" class="black-text center-align">Business Profile</a>
+                                                            {{#if user.isOwner}}
+                                                                <a href='/stores'  class="black-text center-align">Business Locations</a>
+                                                                <a href='/departments' class="black-text center-align">Departments</a>
+                                                            {{/if}}
+                                                        
+                                                    </div> 
+                                            </li>
+                                {{else}}
+  
+                                {{/ifCond}}
+
+                                <li class="collapseli">
+                                    <div class="collapsible-header mb-2"><img src="/img/employees.svg" class="iconFixed" alt="store front" height="26" width="26">Employees</div>
+                                        <div class="collapsible-body grey lighten-2">
+                                            {{#if user.isOwner}}
+                                                <a href="/employees/view/{{user._id}}" class="black-text center-align">View All</a>
+                                                {{else}}
+                                                <a href="/employees/view" class="black-text center-align">View All</a>
+                                            {{/if}}
+                                            
+                                            {{#ifCond user.isOwner '||' user.isManager}}
+                                                <a href="/employees/add"  class="black-text center-align">Add Employee</a>
+                                            {{/ifCond}}
+                                            <a href="/employees/messageboard" class="black-text center-align">Message Board</a>     
+                                        </div> 
+                                </li>
+
+                                <li class="collapseli">
+                                    <div class="collapsible-header mb-2"><img src="/img/calendar.svg" class="iconFixed" alt="store front" height="26" width="26">Schedules</div>
+                                        <div class="collapsible-body grey lighten-2">
+                                            {{#if user.isOwner}}  
+                                                    <a href="/schedules/owner/view"  class="black-text center-align">Schedule Builder</a>
+                                                {{else if user.isManager}}
+                                                    <a href="/schedules/build?storeID={{user.employeeStore}}"  class="black-text center-align">Schedule Builder</a>
+                                                {{else}}
+                                                    <a href="/schedules/build?storeID={{user.employeeStore}}"  class="black-text center-align">Employee Schedule</a>
+                                            {{/if}}
+                                                    <a href="/schedules/requests"  class="black-text center-align">Schedule Requests</a>   
+                                        </div> 
+                                </li>
+
+                                {{#ifCond user.isOwner '||' user.isManager}}
+                                    <li class="collapseli">
+                                        <div class="collapsible-header mb-2"><img src="/img/invoices.svg" class="iconFixed" alt="store front" height="26" width="26">Invoices</div>
+                                            <div class="collapsible-body grey lighten-2">
+                                                <a href='/vendors' class="black-text center-align">Vendors</a> 
+                                                <a href="/invoices" class="black-text subMenu">View Invoices</a> 
+                                                <a href="/invoices/add"  class="black-text center-align">Create Invoices</a>  
+                                                {{!-- <a href="/invoices/add/{{user.id}}" class="black-text subMenu">Create Invoices</a> --}}
+                                                <a href="/templates" class="black-text center-align">Templates</a>    
+                                            </div> 
+                                    </li>
+
+                                    <li class="collapseli">
+                                        <div class="collapsible-header mb-2"><img src="/img/inventory.svg" class="iconFixed" alt="store front" height="26" width="26">Inventory</div>
+                                            <div class="collapsible-body grey lighten-2">
+                                                <a href="/inventory/view"  class="black-text center-align">View</a>
+                                                <a href="/inventory/count"  class="black-text center-align">Inventory Count</a>
+                                                <a href="/inventory/orderGuides"  class="black-text center-align">Order Guide</a> 
+                                                <a href="/inventory/storageLocations"  class="black-text center-align">Storage Locations</a>   
+                                            </div> 
+                                    </li>
+                                    
+                                    <li class="collapseli">
+                                        <div class="collapsible-header mb-2"><img src="/img/reports.svg" class="iconFixed" alt="store front" height="26" width="26">Reports</div>
+                                            <div class="collapsible-body grey lighten-2"> 
+                                                    <a href="/reports/inventory"  class="black-text center-align">Inventory</a>  
+                                                    <a href="/reports/labor"  class="black-text center-align">Labor</a>
+                                                    <a href="/reports/invoice"  class="black-text center-align">Invoice</a>
+                                            </div> 
+                                    </li>
+                                {{/ifCond}}
+                                
+                            {{else}}
+                                <li><a class="btn-floating btn-large waves-effect waves-light  light-blue darken-2 sidenav-close right closeBtn" href="#!"><i class="material-icons closeIcon">close</i></a></li>
+                                <li><a href="/features">Features</a></li>
+                                <li><a href="/subscriptions">Subscriptions</a></li>
+                                <li><a href="/auth/register">Register</a></li>
+                                <li><a href="/auth/login">Login</a></li>
+                            {{/if}}   
+
+                </ul>

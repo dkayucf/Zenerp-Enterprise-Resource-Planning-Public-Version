@@ -1,0 +1,88 @@
+
+    <div class="row mb-4">
+        <div class="col s12 m12 l12">
+            <div class="card grey lighten-4 hoverable">
+                <div class="card-content">
+                    <div class="card-header mb-3">
+                        <img src="/img/employees.svg" class="iconFixed mr-3" alt="store front" height="26" width="26"><span class="card-title">Employees</span>
+                    </div>
+                    <table id="employeesTable" class="mdl-data-table employeesTable">
+                        {{#if user.isOwner}}
+                               <thead>
+                                  <tr>
+                                    <th class=" center-align">Name</th>
+                                    <th class=" center-align">Email</th>
+                                    <th class=" center-align">Phone Number</th>
+                                    <th class=" center-align">Department</th>
+                                    <th class=" center-align">Hourly Pay</th>
+                                    <th class=" center-align">Store Name</th>
+                                    <th class=" center-align"></th>
+                                </tr>
+                                </thead>
+                                <!--this is where we need to get the information from each user-->
+                                 <tbody>
+                                     {{#each users}}
+                                          <tr>
+                                             <td class=" center-align">{{this.firstName}} {{this.lastName}}</td>
+                                             <td class=" center-align">{{this.email}}</td>
+                                             <td class=" center-align">{{this.phone}}</td>
+                                             <td class=" center-align">{{this.employeeDepartment.departmentName}}</td>
+                                              <td class=" center-align">{{this.hourlyPay}}</td>
+                                              <!--add link to employee id so when its clicked -->                    
+                                             <td class=" center-align">{{this.employeeStore.storeName}}</td>
+                                              <td><a href="/employees/edit?employeeID={{this.id}}" class="btn btn-info btn-lg   light-blue darken-2"><i class="fas fa-edit"></i></a></td>
+                                         </tr>
+                                 {{/each}}
+                              </tbody>
+                        {{else if user.isManager}}
+                            <thead>
+                                  <tr>
+                                    <th class=" center-align">Name</th>
+                                    <th class=" center-align">Email</th>
+                                    <th class=" center-align">Phone Number</th>
+                                    <th class=" center-align">Department</th>
+                                    <th class=" center-align">Hourly Pay</th>
+                                    <th class=" center-align"></th>
+                                </tr>
+                                </thead>
+                                <!--this is where we need to get the information from each user-->
+                                 <tbody>
+                                     {{#each users}}
+                                          <tr>
+                                             <td class=" center-align">{{this.firstName}} {{this.lastName}}</td>
+                                             <td class=" center-align">{{this.email}}</td>
+                                             <td class=" center-align">{{this.phone}}</td>
+                                             <td class=" center-align">{{this.employeeDepartment.departmentName}}</td>
+                                              <td class=" center-align">{{this.hourlyPay}}</td>
+                                              <!--add link to employee id so when its clicked -->                    
+                                              <td><a href="/employees/edit?employeeID={{this.id}}" class="btn btn-info btn-lg   light-blue darken-2"><i class="fas fa-edit"></i></a></td>
+                                         </tr>
+                                 {{/each}}
+                              </tbody>
+                        {{else}}
+                                  <thead>
+                                      <tr>
+                                        <th class=" center-align">Name</th>
+                                        <th class=" center-align">Email</th>
+                                        <th class=" center-align">Phone Number</th>
+                                        <th class=" center-align">Department</th>
+                                    </tr>
+                                    </thead>
+                                    <!--this is where we need to get the information from each user-->
+                                     <tbody>
+                                         {{#each users}}
+                                      <tr>
+                                         <td class=" center-align">{{this.firstName}} {{this.lastName}}</td>
+                                         <td class=" center-align">{{this.email}}</td>
+                                         <td class=" center-align">{{this.phone}}</td>
+                                         <td class=" center-align">{{this.employeeDepartment.departmentName}}</td>
+                                     </tr>
+                                     {{/each}}
+                                  </tbody>
+                          {{/if}}
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+    </div>

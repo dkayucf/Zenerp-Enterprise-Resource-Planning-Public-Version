@@ -1,0 +1,285 @@
+
+   
+
+<div class="row mt-3">
+    <div class="col l3"></div>
+    <div class="col l6">
+       <label class="black-text">Vendors</label>
+        <select class="browser-default vendorSelect">
+            <option value="" disabled selected>Choose your vendor</option>
+            {{#each vendors}}
+                <option value="{{_id}}">{{vendorName}}</option>
+            {{else}}
+                <option value="0">No vendors found</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="col l3"></div>
+</div>
+<div class="row">
+    <div class="col m12">
+        <div class="card grey lighten-4 hoverable invoiceCard mb-4">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col m9">
+                        <h1>INVOICE</h1>
+                    </div>
+                    <div class="col m3 right">
+                        {{#if business.businessImage}}
+                                <img src="{{business.businessImage}}" alt="" style="width:250px;">
+                            {{else}}
+                                <img src="http://via.placeholder.com/250x250" alt="" style="width:250px;">                             
+                        {{/if}}
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l4 invoiceDateData">
+                       <div class="card-panel grey lighten-5 hoverable">
+                          <span class="card-title">Invoice Details</span>
+                           <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="invoiceId">Invoice ID</label>
+                                    <input type="number" class="invoiceId">
+                                </div>   
+                           </div>
+                           <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="fas fa-calendar-alt prefix"></i>
+                                    <input type="text" class="issueDate datepicker" aria-label="Issue Date">
+                                    <label for="issueDate">Issue Date</label>
+                                </div>   
+                                <div class="input-field col s6">
+                                    <i class="fas fa-calendar-alt prefix"></i>
+                                    <input type="text" class="dueDate datepicker">
+                                    <label for="dueDate">Due Date</label>
+                                </div>   
+                           </div>
+                           <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="invoiceSubject">Subject</label>
+                                    <input type="text" class="invoiceSubject">
+                                </div>   
+                           </div>
+                           <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="salesPerson">Salesperson</label>
+                                    <input type="text" class="salesPerson">
+                                </div>      
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col l4">
+                        <div class="card-panel grey lighten-5 hoverable">
+                            <span class="card-title">Business From</span>
+                            {{#if business}}
+                            {{else}}
+                                <a href="/account/business-profile/" class="btn  light-blue darken-2 addNewItem ml-3 mb-2"><i class="far fa-edit"></i>Update Business Profile</a>
+                            {{/if}}
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="businessName" class="validate businessName" value="{{business.businessName}}" disabled>
+                                    <label for="businessName">Business Name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="email" name="businessEmail" class="validate businessEmail" value="{{business.businessEmail}}" disabled>
+                                    <label for="businessEmail">Email</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="tel" name='businessPhone' class="validate businessPhone" value="{{business.businessPhone}}" disabled>
+                                    <label for="businessPhone">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="text" name="businessAddress" class="validate businessAddress" value="{{business.businessAddress}}" disabled>
+                                    <label for="businessAddress">Address</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="text" name="businessCity" class="validate businessCity" value="{{business.businessCity}}" disabled>
+                                    <label for="businessCity">City</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6 stateCol">
+                                   <label for="businessState">State</label>
+                                   <input type="text"class="businessState states" name="businessState" value="{{business.businessState}}" disabled>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="number" name="businessZip" class="validate businessZip" value="{{business.businessZip}}" disabled>
+                                    <label for="businessZip">Zip Code</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l4">
+                        <div class="card-panel grey lighten-5  hoverable">
+                            <span class="card-title">Vendor To</span>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="vendorName" class="validate vendorName" disabled>
+                                    <label for="vendorName">Vendor Name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="email" name="vendorEmail" class="validate vendorEmail" disabled>
+                                    <label for="vendorEmail">Email</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="tel" name='vendorPhone' class="validate vendorPhone" disabled>
+                                    <label for="vendorPhone">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input type="text" name="vendorAddress" class="validate vendorAddress" disabled>
+                                    <label for="vendorAddress">Address</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="text" name="vendorCity" class="validate vendorCity" disabled>
+                                    <label for="vendorCity">City</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6 stateCol">
+                                   <label for="vendState">State</label>
+                                   <input type="text"class="vendorState states" name="vendorState" disabled>                             
+                                </div>
+                                <div class="input-field col s6">
+                                    <input type="number" name="vendorZip" class="validate vendorZip"  disabled>
+                                    <label for="vendorZip">Zip Code</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l12">
+                        <div class="card-panel grey lighten-5  hoverable">
+                           <input type="hidden" class="invItemId">
+                            <div class="row">
+                                <div class="input-field col m3">    
+                                    <label for="itemType">Item Type</label>
+                                    <input type="text" class="validate itemType">    
+                                </div>
+                                <div class="input-field col m3">
+                                    <label for="description">Description</label>
+                                    <input type="text" class="validate description">
+                                </div>
+                                <div class="input-field col m2">
+                                    <label for="quantity">Quantity</label>
+                                    <input type="number" class="validate quantity">    
+                                </div>
+                                <div class="input-field col m2">
+                                    <label for="unitPrice">Unit Price</label>
+                                    <input type="number" class="validate unitPrice" step=".01">    
+                                </div>
+                                <div class="input-field col m2">
+                                    <label for="itemAmount">Amount</label>
+                                    <input type="number" class="validate itemAmount" disabled step=".01">    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="btn grey darken-1 right ml-3 mr-2 backBtn" type="button" style="display: none;"><i class="fas fa-chevron-left mr-2"></i>Back</button>
+                                <button type="button" class="btn  light-blue darken-2 right updateItem" style="display: none;"><i class="far fa-save mr-2"></i>Update Item</button>
+                                 <button type="button" class="btn  light-blue darken-2 addNewItem right mr-2"><i class="fas fa-plus mr-1"></i>Add Item</button>   
+                            </div> 
+                            <div class="row">
+                                <div class="col l12">
+                                    <table class="striped centered responsive-table highlight invoiceTable">
+                                        <thead class="invTabHead">
+                                            <tr>
+                                                <th>Item Type</th>
+                                                <th>Description</th>
+                                                <th>Quantity</th>
+                                                <th>Unit Price</th>
+                                                <th>Amount</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="invTabBody"></tbody>
+                                    </table>
+                                </div>
+                            </div>         
+                        </div>   
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l12 ">
+                       <div class="card-panel grey lighten-5 hoverable">
+                            
+                            <div class="row">
+                                <div class="col l8">
+                                  <div class="row">
+                                      <div class="col l12">
+                                        <div class="input-field">
+                                            <label for="comments">Comments &amp; Details</label>
+                                            <textarea id="comments" class="materialize-textarea comments" rows="4"></textarea>   
+                                       </div>  
+                                      </div>
+                                  </div>
+                                   <div class="row">
+                                       <div class="col l12">
+                                          <p>Terms &amp; Conditions<p>
+                                          <div class="invoiceTerms">
+                                                {{stripTags business.businessTerms}}  
+                                          </div>
+                                       </div>
+                                   </div>
+                                   <div class="row">
+                                       <div class="col l8">
+                                           <a href="#" class="btn payWithPayPal light-blue darken-4 mb-2"><i class="fab fa-paypal mr-1"></i>Pay with Paypal</a>
+                                           <a href="#" class="btn payWithStripe grey darken-3 text-white mb-2"><i class="fab fa-stripe mr-1"></i>Pay with Stripe</a>
+                                           <a href="#" class="btn payWithStripe red darken-4 text-white mb-2"><i class="fab fa-google mr-1"></i>Pay with Google</a>
+                                       </div>
+                                       <div class="col l4"></div>
+                                   </div>
+                                </div>
+                                <div class="col l4">
+                                    <div class="input-field col s12">
+                                        <i class="fas fa-dollar-sign prefix"></i>
+                                        <input type="number" class="subtotal" disabled>
+                                        <label for="invoiceId">Subtotal</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <i class="fas fa-percent prefix"></i>
+                                        <input type="number" class="taxRate" aria-label="Issue Date" value="{{business.businessTaxRate}}" disabled>
+                                        <label for="taxRate">Tax Rate</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <i class="fas fa-dollar-sign prefix"></i>
+                                        <input type="number" class="taxAmount" disabled>
+                                        <label for="taxAmount">Tax Amount</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <i class="fas fa-dollar-sign prefix"></i>
+                                        <input type="number" class="payments">
+                                        <label for="payments">Payments</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <i class="fas fa-dollar-sign prefix"></i>
+                                        <input type="number" class="amountDue" disabled>
+                                        <label for="amountDue">Amount Due</label>
+                                    </div>
+                                    {{#if user}}
+                                        <input type="hidden" class="hiddenID" value="{{user.id}}">   
+                                   {{else}}
+                                   {{/if}}
+                                </div>
+                            </div>   
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-action">
+               <button type="button" class="btn light-green darken-1 saveInvoice mr-1"><i class="far fa-save  mr-1"></i>Save Invoice</button> 
+               <button type="button" class="btn grey darken-3 mr-1"><i class="far fa-file-pdf  mr-1"></i>PDF</button> 
+               <button type="button" class="btn  light-blue darken-2 "><i class="far fa-paper-plane  mr-1"></i>Email Invoice</button> 
+            </div>
+        </div>
+    </div>
+</div>
+

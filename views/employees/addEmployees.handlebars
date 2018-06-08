@@ -1,0 +1,134 @@
+{{#ifCond user.isOwner '||' user.isManager}}
+  <div class="row mb-4">
+    <div class="col s12 m12 l12">
+        <div class="card grey lighten-4 hoverable">
+            <div class="card-content">
+                <div class="alert-container">
+                    {{> _msg}}  
+                </div>
+                <div class="card-header mb-3" style="display: inline">
+                        <img src="/img/employeeFile.svg" class="iconFixed mr-3" alt="store front" height="26" width="26"><span class="card-title">Add Employee</span>
+                    </div>
+                <button class="btn grey darken-3 text-white right generalBackBtn">Back</button>
+                <form action="/employees/add" method="post">
+                       <div class="row mt-2">
+                            <div class="input-field col s6">
+                              <input type="text" name="firstName" class="validate" value="{{firstName}}" required>
+                              <label for="name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input type="text" name="lastName" class="validate" value="{{lastName}}" required>
+                              <label for="name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type="email" name="email" class="validate" required>
+                                <label for="email">Email</label>
+                                {{#each email_error}}
+                                        <span class="helper-text red-text text-darken-3" data-error="wrong">{{text}}</span>
+                                    {{else}}
+                                {{/each}}
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="At least 6 characters" name="password" type="password" class="validate" required>
+                                <label for="password">Password</label>
+                                    {{#each errors}}
+                                            <span class="helper-text red-text text-darken-3" data-error="wrong">{{text}}</span>
+                                    {{else}}
+                                    {{/each}}
+                            </div> 
+                        </div>
+
+                      <div class="row">
+                            <div class="input-field col s6 phoneContainer">
+                                <input type="tel" name="phone"  id="phone" class="validate" value="{{phone}}" required>
+                                <label for="phone" class="phoneLabel">Phone Number</label>
+                            </div>
+                            {{#if user.isOwner}}
+                                <div class="col s6">
+                                    <p>Is this employee a manager?</p>
+                                        <p class="mt-1">
+                                            <label for="managerCheck">
+                                                <input name="managerCheck" id="managerCheck" class="with-gap" type="radio" value="true"  />
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="ml-2" for="managerCheck1">
+                                                <input name="managerCheck" id="managerCheck1" class="with-gap" value="false"  type="radio" checked />
+                                                <span>No</span>
+                                            </label>
+                                        </p>
+                                </div>
+                            {{/if}}
+                      </div>
+                      <div class="card-action mt-2 mb-2">
+                            <div class="row mb-3">
+                                <div class="col l6">
+                                    <div class="input-field col s12">
+                                            <p>What store should this employee be assigned to?</p>
+                                            <select name="employeeStore" class="employeeStore browser-default" required>
+                                            <option value="" disabled selected>Choose Store Location</option>
+                                                {{#each locations}}
+                                                    <option value="{{_id}}">{{storeName}}</option>
+                                                {{/each}}
+                                            </select>
+                                        
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <p>What department should this employee be assigned to?</p>
+                                        <select name="employeeDepartment" class="employeeDepartment browser-default" required>
+                                        <option value="" disabled>Choose Department</option>
+                                        {{#each departments}}
+                                            <option value="{{_id}}">{{departmentName}}</option>  
+                                        {{/each}}
+                                        </select>
+                                    </div>
+                                    <div class="input-field col s12" id="salaryDiv">
+                                        <input type="number" name="salaryPay" class="validate"  min=".01" step=".01" value="{{salaryPay}}" >
+                                        <label for="salaryPay">Salary</label>
+                                    </div>
+                                </div>
+                            <div class="col l6">
+                                <div class="col s12 mb-2">
+                                    <p>Employment Status</p>
+                                        <p class="mt-1">
+                                            <label for="partTime">
+                                                <input name="employmentStatus" id="partTime" class="partTime with-gap" value="partTime" type="radio" required />
+                                                <span>Part-time</span>
+                                            </label>
+                                            <label class="ml-2" for="fullTime">
+                                                <input name="employmentStatus" id="fullTime" class="fullTime with-gap" value="fullTime"  type="radio" />
+                                                <span>Full-time</span>
+                                            </label>
+                                            <label class="ml-2" for="internship">
+                                                <input name="employmentStatus" id="internship" class="internship with-gap" value="internship"  type="radio" />
+                                                <span>Internship</span>
+                                            </label>
+                                            <label class="ml-2" for="terminated">
+                                                <input name="employmentStatus" id="terminated" class="terminated with-gap" value="terminated"  type="radio" />
+                                                <span>Terminated</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    
+
+                                    <div class="input-field col s12">
+                                        <input type="text" id="hireDate" name="hireDate" class="datepicker" value="{{hireDate}}"> 
+                                        <label for="hireDate">Hire Date</label> 
+                                    </div>
+                                    <div class="input-field col s12" id="hourlyDiv">
+                                        <input type="number" name="hourlyPay" class="validate" min=".01" step=".01" value="{{hourlyPay}}">
+                                        <label for="hourlyPay">Hourly Pay</label>
+                                    </div>
+                                    
+                            </div>
+                            </div>
+                                <input type="hidden" name="businessID" value="{{businessID}}">
+                            <button class="btn waves-effect waves-light btn-block  light-blue darken-2" type="submit">Add Employee</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{/ifCond}} 

@@ -1,0 +1,197 @@
+<div class="row">
+    <div class="col l4">
+        <div class="card">
+            <div class="card-content">
+            <span class="card-title"><img src="/img/calendarWarning.svg" class="iconFixed mr-2" alt="store front" height="26" width="26">Request Time Off </span>
+            </div>
+            <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#singleDay" class="light-blue-text text-darken-2 active">Single Day</a></li>
+                <li class="tab"><a  class="light-blue-text text-darken-2" href="#multipleDays">Multiple Days</a></li>
+            </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+            <div id="singleDay">
+                <form action="/schedules/requests?userID={{user.id}}&requestType=false" method="post">
+                    <div class="row schedReqForm">
+                        <div class="col s12 m-0">
+                            <div class="input-field">
+                                    <input type="text" id="scheduleRequestSingle" name="requestDate" class="datepicker" required> 
+                                    <label for="requestDate">Request Date</label> 
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row schedReqForm">
+                        <div class="col s6 l6 m-0">
+                            <div class="input-field">
+                                <input name="requestStart" type="text" class="timepicker requestStart" required>
+                                <label for="requestTime">Start Time</label>
+                            </div>
+                        </div>
+                        <div class="col s6 l6 m-0">
+                            <div class="input-field">
+                                <label for="requestTime">End Time</label>
+                                <input name="requestEnd" type="text" class="timepicker requestEnd" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row schedReqForm">
+                        <div class="col s12 l12 m-0">
+                                <label for="schedReqComments">Employee Comments</label>
+                                <textarea name="employeeComments" class="materialize-textarea schedReqComments" required></textarea> 
+                        </div>
+                    </div>
+                    <div class="row schedReqForm mt-3 mb-3">
+                        <div class="col s12 l6 m-0">
+                                <button type="submit" class="btn light-blue darken-2 btn-block">Submit Request</button>
+                        </div>
+                    </div>
+                        
+                </form>
+            </div>
+            <div id="multipleDays">
+                <form action="/schedules/requests?userID={{user.id}}&requestType=true" method="post">
+                <label for="" id="mdStep1">Step 1: Select date <b>range</b> that your desired request will fall within.</label>
+                    <div class="row schedReqForm mb-3">
+                        <div class="col s6 l6 m-0">
+                            <div class="input-field">
+                                    <input type="text"  id="requestDateStart" name="requestDateStart" class="datepicker requestDateStart" required> 
+                                    <label for="requestDateStart">Start Date</label>
+                            </div>
+                        </div>
+                        <div class="col s6 l6 m-0">
+                            <div class="input-field">
+                                    <input type="text" id="requestDateEnd" name="requestDateEnd" class="datepicker requestDateEnd" required> 
+                                    <label for="requestDateEnd">End Date</label>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="" class="mdStep2">Step 2: Within the date range selected above. Does this schedule request occur daily or on selected days?</label>
+                    <div class="row schedReqForm mb-3 mdStep2">
+                        <div class="col s12 l12 m-0">
+                                <p class="mt-1">
+                                    <label for="dailyRequest">
+                                        <input name="dateRepeat" id="dailyRequest" class="dailyRequest with-gap mb-2" value="dailyRequest" type="radio"  />
+                                        <span>Daily</span>
+                                    </label>
+                                    <label class="ml-2" for="weeklyRequest">
+                                        <input name="dateRepeat" id="weeklyRequest" class="weeklyRequest with-gap mb-2" value="weeklyRequest"  type="radio" />
+                                        <span>Weekly (Selected Days)</span>
+                                    </label>
+                                </p>
+                        </div>
+                    </div>
+                    <div class="row schedReqForm mb-3 dateRepeat" style="display: none">
+                        <div class="col s12 l6 m-0">
+                                <select name="weeklyRequestDays" multiple>
+                                    <option value="" disabled selected>Select all that apply</option>
+                                    <option value="Monday">Monday</option>
+                                    <option value="Tuesday">Tuesday</option>
+                                    <option value="Wednesday">Wednesday</option>
+                                    <option value="Thursday">Thursday</option>
+                                    <option value="Friday">Friday</option>
+                                    <option value="Saturday">Saturday</option>
+                                    <option value="Sunday">Sunday</option>
+                                </select>
+                        </div>
+                    </div>
+                    <label for="" class="mdStep3">Step 3: Select desired <b>Timeframe</b> your schedule request will occur on the selected days. If all day, select business hours from open to close</label>
+                    <div class="row schedReqForm">
+                        <div class="col s6 l6 m-0">
+                            <div class="input-field">
+                                <input name="requestStart" type="text" class="timepicker requestStart" required>
+                                <label for="requestTime">Start Time</label>
+                            </div>
+                        </div>
+                        <div class="col s6 l6 m-0">
+                            <div class="input-field">
+                                <label for="requestTime">End Time</label>
+                                <input name="requestEnd" type="text" class="timepicker requestEnd" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row schedReqForm mt-2">
+                        <div class="col s12 l12 m-0">
+                                <label for="schedReqComments">Employee Comments</label>
+                                <textarea name="employeeComments" class="materialize-textarea schedReqComments" required></textarea> 
+                        </div>
+                    </div>
+                    <div class="row schedReqForm mt-3 mb-3">
+                        <div class="col s12 l6 m-0">
+                                <button type="submit" class="btn light-blue darken-2 btn-block">Submit Request</button>
+                        </div>
+                    </div>
+                        
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="col l8">
+        <div class="card grey lighten-4 hoverable">
+                <div class="card-content">
+                    <span class="card-title">Pending Schedule Requests</span>
+                    <table id="scheduleRequestsTable" class="mdl-data-table dt-responsize">
+                        <thead>
+                            <tr>
+                                {{#ifCond user.isOwner '||' user.isManager}}
+                                    <th class="center-align">Name</th>
+                                    <th class="center-align">Phone</th>
+                                    <th class="center-align">Start Date</th>
+                                    <th class="center-align">End Date</th>
+                                    <th class="center-align">Start Time</th>
+                                    <th class="center-align">End Time</th>
+                                    <th></th>
+                                    <th></th>
+                                {{else}}
+                                    <th class="center-align">Name</th>
+                                    <th class="center-align">Start Date</th>
+                                    <th class="center-align">End Date</th>
+                                    <th class="center-align">Start Time</th>
+                                    <th class="center-align">End Time</th>
+                                {{/ifCond}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                                {{#ifCond user.isAdmin '||' user.isManager}}
+                                        {{#each requests}}
+                                        <tr>
+                                            <td class="center-align">{{name}}</td>
+                                            <td class="center-align">{{phone}}</td>
+                                            <td class="center-align">{{requestStartDate}}</td>
+                                            <td class="center-align">{{requestEndDate}}</td>
+                                            <td class="center-align">{{requestTimeStart}}</td>
+                                            <td class="center-align">{{requestTimeEnd}}</td>
+                                            {{#if requestStatus}}
+                                                <td class="center-align"><a href="#" class="btn green lighten-1">Approved</a></td>
+                                                <td class="center-align"><a href="/schedules/request/delete?requestID={{_id}}" class="btn red darken-1"><i class="fas fa-trash-alt"></i></a></td>
+                                            {{else}}
+                                                <td class="center-align"><a href="/schedules/request/approve?requestID={{_id}}" class="btn light-blue darken-2">Approve</a></td>
+                                                <td class="center-align"><a href="/schedules/request/disapprove?requestID={{_id}}" class="btn red darken-1">Disapprove</a></td>
+                                            {{/if}}
+                                            
+                                        </tr>
+                                        {{/each}}
+                                    {{else}}
+                                        {{#each requests}}
+                                        <tr>
+                                            <td class="center-align">{{name}}</td>
+                                            <td class="center-align">{{requestStartDate}}</td>
+                                            <td class="center-align">{{requestEndDate}}</td>
+                                            <td class="center-align">{{requestTimeStart}}</td>
+                                            <td class="center-align">{{requestTimeEnd}}</td>
+                                        </tr>
+                                        {{/each}}
+
+                                 {{/ifCond}}
+                            
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+</div>
+

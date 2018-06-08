@@ -1,0 +1,97 @@
+
+   
+
+    <div class="row ml-4 mr-4 mt-4">
+        <div class="col s12 m6 l4">
+          <div class="card grey lighten-4 hoverable dashboardCard">
+            <div class="card-image">
+              <a class="btn-floating halfway-fab waves-effect waves-light  light-blue darken-2"><i class="material-icons">pageview</i></a>
+            </div>
+            <div class="card-content center-align ">
+             <h5 class="card-title">Invoices Due: {{dueCount}}</h5>
+               <table class="highlight centered">
+                    <thead>
+                        <tr>
+                            <th>Vendor</th>
+                            <th>Due Date</th>
+                            <th>Balance Due</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each invoicesDue}}
+                        <tr>
+                            <td><a href="invoices/edit/{{_id}}" class=" light-blue-text text-darken-3">{{vendorTo.vendorName}}</a></td>
+                            <td>{{formatDate dueDate 'M/D/YYYY'}}</td>
+                            <td>${{amountDue}}</td>
+                        </tr>
+                    {{else}}
+
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card grey lighten-4 hoverable dashboardCard">
+            <div class="card-image">
+              <a class="btn-floating halfway-fab waves-effect waves-light  light-blue darken-2"><i class="material-icons">pageview</i></a>
+            </div>
+            <div class="card-content center-align">
+             <h5 class="card-title">Invoices Past Due: {{pastDueCount}}</h5>
+               <table class="highlight centered">
+                    <thead>
+                        <tr>
+                            <th>Vendor</th>
+                            <th>Due Date</th>
+                            <th>Balance Due</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each invoicesPastDue}}
+                        <tr>
+                            <td><a href="invoices/edit/{{_id}}" class="red-text text-darken-3">{{vendorTo.vendorName}}</a></td>
+                            <td>{{formatDate dueDate 'M/D/YYYY'}}</td>
+                            <td>${{amountDue}}</td>
+                        </tr>
+                    {{else}}
+
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card grey lighten-4 hoverable dashboardCard">
+            <div class="card-image">
+              <a class="btn-floating halfway-fab waves-effect waves-light  light-blue darken-2"><i class="material-icons">pageview</i></a>
+            </div>
+            <div class="card-content center-align">
+             <h5 class="card-title">Invoices Paid: {{paidCount}}</h5>
+               <table class="highlight centered">
+                    <thead>
+                        <tr>
+                            <th>Vendor</th>
+                            <th>Due Date</th>
+                            <th>Balance Due</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each invoicesPaid}}
+                        <tr>
+                            <td><a href="invoices/edit/{{_id}}" class="light-green-text text-darken-3">{{vendorTo.vendorName}}</a></td>
+                            <td>{{formatDate dueDate 'M/D/YYYY'}}</td>
+                            <td>${{amountDue}}</td>
+                        </tr>
+                    {{else}}
+
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+    </div>    
+
+

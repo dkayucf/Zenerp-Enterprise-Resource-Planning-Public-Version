@@ -1,0 +1,80 @@
+
+        {{#if user.isOwner}}
+
+        <div class="row">
+            <div class="input-field col s4 right">
+                <p class="mb-0">View Store Schedule</p>
+                <select name="storeName" class="browser-default" id="storeNameSelect" required>
+                    <option value="" disabled selected>Choose Store</option>
+                    {{#each stores}}
+                        <option value="{{_id}}">{{storeName}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+        {{else}}
+    
+        {{/if}}
+    
+    <div class="row">
+    {{#ifCond user.isOwner '||' user.isManager}}
+        <div class="col l9">
+    {{else}}
+        <div class="col l12">
+    {{/ifCond}}        
+            <div class="card scheduleCard">
+                
+                    
+                    
+                <div class="card-content">
+                    <div class="card-header mb-3">
+                        <img src="/img/employees.svg" class="iconFixed mr-3" alt="store front" height="26" width="26"><span class="card-title">Employee Calendar</span>
+                    </div>
+                    {{#ifCond user.isOwner '||' user.isManager}}
+                        <div id='managersCalendar'></div>
+                    {{else}}
+                        <div id='employeesCalendar'></div>
+                    {{/ifCond}}
+                </div>
+                <div class="loader"></div>
+                <div class="card-after"></div>
+            </div>
+        </div>
+        {{#ifCond user.isOwner '||' user.isManager}}
+        <div class="col l3">
+            <div class="card scheduleStatusCard">
+                    <span class="card-title ml-3">Schedule Status</span>
+                <div class="card-content">
+                    <p class="mt-1">
+                        <label for="draftCheck">
+                            <input name="managerCheck" id="draftCheck" class="with-gap" type="radio" value="true"  checked/>
+                            <span><button class="btn draftStatusBtn light-blue darken-2 mb-2 pl-3 pr-3">Draft Status</button></span>
+                        </label>
+                    </p>
+                     <p class="mt-2">
+                        <label for="publishedCheck">
+                            <input name="managerCheck" id="publishedCheck" class="with-gap" type="radio" value="false"  />
+                            <span><button class="btn blue darken-2 publishStatusBtn">Published Status</button></span>
+                        </label>
+                    </p>
+                    <div class="input-field mt-3">
+                        <p>Manager Comments</p>
+                        <textarea id="comments" class="browser-default comments" rows="10"></textarea> 
+                    </div> 
+                    <button class="btn btn-block blue darken-3 updateStatusBtn" type="submit" disabled>Update Status</button>  
+                </div>
+                <div class="loader schedStatLoader"></div>
+                <div class="card-after"></div>
+            </div>
+                <div class="card scheduleStatusCard">
+                    <span class="card-title ml-3">Employee Hours</span>
+                <div class="card-content">
+                    <ul class="collection scheduledHours">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{/ifCond}}
+    </div> 
+    {{> _scheduleSettings}}   
+

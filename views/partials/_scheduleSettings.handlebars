@@ -1,0 +1,41 @@
+<!-- Modal Structure -->
+  <div id="scheduleSettings" class="modal">
+    <div class="modal-content">
+        <h4>Schedule Settings</h4>
+      <form action="" id="settingsForm" method="POST">
+          <div class="input-field col s12 mb-3 mt-3">
+            <select class="form-control" id="timeIntervals" name="slotDuration">
+                <option value="00:15:00">15-Minute Intervals</option>
+                <option value="00:30:00">30-Minute Intervals</option>
+                <option value="00:60:00">1-Hour Intervals</option>
+            </select>
+            <label for="timeIntervals">Time Duration Intervals</label>
+          </div>
+          <div class="input-field col s12 mb-3">
+            <select class="form-control" id="weekStartsOn" name="firstDay">
+                <option value="">Select One</option>
+                <option value="0">Sunday</option>
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="3">Wednesday</option>
+                <option value="4">Thursday</option>
+                <option value="5">Friday</option>
+                <option value="6">Saturday</option>
+            </select>
+            <label for="weekStartsOn">Week Starts On</label>
+          </div>
+          <div class="row">
+              <div class="input-field col s6 mb-3">
+                <input type="text" class="timepicker minStartTime" id="minStartTime" name="minTime">
+                <label for="minStartTime">Min Start Time</label>
+            </div>
+            <div class="input-field col s6 mb-3">
+              <input type="text" class="timepicker maxStartTime" id="maxStartTime" name="maxTime">
+                <label for="maxStartTime">Max Start Time</label>
+            </div>
+          </div>
+            
+            <button type="submit" class="btn blue darken-2 right mb-3">Save Settings</button> 
+      </form>
+    </div>
+  </div>

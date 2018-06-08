@@ -1,0 +1,139 @@
+{{#if user.isOwner}}
+    <div class="row mt-3 mb-3">
+        <div class="col s12 m8 l12 offset-m2">
+            <div class="card grey lighten-4 hoverable"> 
+                <div class="card-content">
+                    <div class="alert-container">
+                        {{> _msg}}  
+                    </div>
+                    <span class="card-title mb-3">Corporate Business Profile</span>
+                       <div class="row profileLogo">
+                            <img src="{{business.businessImage}}" alt="" style="width:250px; height: 250px">   
+                       </div>
+                    <form action="/account/business-profile/{{business.id}}?_method=PUT" method="post" enctype="multipart/form-data">
+                       <input type="hidden" name="_method" value="PUT">
+                       <div class="row">
+                           <div class="col l6">
+                                <div class="file-field input-field">
+                                    <div class="btn  light-blue darken-2">
+                                        <span>Logo Upload</span>
+                                        <input type="file" id="image" name="businessImage" accept="image/*">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input type="text" name="businessName" class="validate businessName" value="{{business.businessName}}">
+                                        <label for="businessName">Business Name</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input type="email" name="businessEmail" class="validate businessEmail" value="{{business.businessEmail}}">
+                                        <label for="businessEmail">Email</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input type="tel" name='businessPhone' id="phone" class="validate businessPhone" value="{{business.businessPhone}}">
+                                        <label for="businessPhone">Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input type="text" name="businessAddress" class="validate businessAddress" value="{{business.businessAddress}}">
+                                        <label for="businessAddress">Address</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input type="text" name="businessCity" class="validate businessCity" value="{{business.businessCity}}">
+                                        <label for="businessCity">City</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input type="text" id="businessState" name="businessState" class="states" value="{{business.businessState}}">
+                                        <label for="businessState">State</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input type="number" name="businessZip" class="validate businessZip" value="{{business.businessZip}}">
+                                        <label for="businessZip">Zip Code</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input type="number" name="businessTaxRate" class="validate taxRate" value="{{business.businessTaxRate}}" step=".01">
+                                        <label for="businessTaxRate">Tax Rate</label>
+                                    </div>
+                                </div>   
+                           </div>
+                           <div class="col l6">
+                               <div class="row termsRow">
+                                    <div class="input-field col s12">
+                                       <p class="=termsLabel">Invoice Terms and Conditions</p>
+                                       <textarea name="businessTerms" id="" cols="30" rows="8" class="businessTerms">{{business.businessTerms}}</textarea>
+                                    </div>
+                                </div>
+                           </div>
+                       </div>
+                        <div class="card-action">
+                               <button class="btn waves-effect waves-light  light-blue darken-2 btn-block" type="submit">UPDATE BUSINESS PROFILE</button>                 
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </div>
+    </div> 
+{{else if user.isManager}} 
+  <div class="row mt-3 mb-3">
+        <div class="col s12 m8 l6 offset-m2">
+            <div class="card grey lighten-4 hoverable"> 
+                <div class="card-content">
+                    <span class="card-title mb-3">Corporate Business Profile</span>
+                       <div class="row profileLogo mt-3 mb-3">
+                            <img src="{{business.businessImage}}" alt="" style="width:250px; height: 250px">   
+                       </div>
+                       <div class="row">
+                           <div class="col l12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input type="text" name="businessName" class="validate businessName" value="{{business.businessName}}">
+                                        <label for="businessName">Business Name</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input type="email" name="businessEmail" class="validate businessEmail" value="{{business.businessEmail}}">
+                                        <label for="businessEmail">Email</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input type="tel" name='businessPhone' id="phone" class="validate businessPhone" value="{{business.businessPhone}}">
+                                        <label for="businessPhone">Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input type="text" name="businessAddress" class="validate businessAddress" value="{{business.businessAddress}}">
+                                        <label for="businessAddress">Address</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input type="text" name="businessCity" class="validate businessCity" value="{{business.businessCity}}">
+                                        <label for="businessCity">City</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <input type="text" id="businessState" name="businessState" class="states" value="{{business.businessState}}">
+                                        <label for="businessState">State</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input type="number" name="businessZip" class="validate businessZip" value="{{business.businessZip}}">
+                                        <label for="businessZip">Zip Code</label>
+                                    </div>
+                                </div> 
+                           </div>
+                       </div>
+                </div>
+            </div>    
+        </div>
+    </div> 
+{{/if}}
