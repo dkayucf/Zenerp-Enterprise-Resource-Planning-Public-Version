@@ -14,13 +14,13 @@
 | ------ | 
 | ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/addEmployee.gif "adding employees") |
 
-##Scheduling
+## Scheduling
 
 ### Employee Schedule Requests and Manager Approval Process
-| Employee Request | Manager Approval |
-| ------ | ------ |
-| ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleRequest.gif "Schedule Request") | ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleReqApp.gif "adding manager")|
-
-| Approval Notification |
+| Employee Request |
 | ------ | 
-| ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleRequestTxt.gif "adding employees") |
+| ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleRequest.gif "Schedule Request") | 
+
+| Manager Approval | Approval Notification |
+| ------ | ------ |
+|![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleReqApp.gif "request approval")| ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleRequestTxt.gif "request notification") | 
