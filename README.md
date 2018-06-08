@@ -5,7 +5,7 @@
 | ------ | ------ |
 | ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/businessProfile.gif "business profile") | ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/addingDepartments.gif "adding departments")|
 
-### Owner Setting up store locations and hiring managers to be assigned to created store locations.  (Click images for larger view)
+### Owner Setting up store locations and hiring managers to be assigned to newly created store locations. 
 | Setup Store Locations | Owner Adding Managers to Store |
 | ------ | ------ |
 | ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/addStores.gif "setup locations") | ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/addManager.gif "adding manager")|
