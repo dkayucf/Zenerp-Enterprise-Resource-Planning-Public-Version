@@ -24,3 +24,7 @@
 | Manager Approval | Approval Notification |
 | ------ | ------ |
 |![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleReqApp.gif "request approval")| ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleRequestTxt.gif "request notification") | 
+
+| Building Schedule | Schedule Notification |
+| ------ | ------ |
+|![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleBuilding.gif "Building Schedule")| ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleShiftTxt.gif "schedule notification") | 
