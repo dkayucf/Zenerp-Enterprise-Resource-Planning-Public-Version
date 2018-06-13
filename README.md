@@ -1,10 +1,10 @@
 # Zenerp-Enterprise-Resource-Planning-Public-Version
 
-- [Business Profile](#Owner-Setting-up-business-profile-and-adding-departments.)
-- [Store Location Setup](#Owner-Setting-up-store-locations-and-hiring-managers-to-be-assigned-to-newly-created-store-locations.)
-- [Scheduling](#Scheduling)
-    - [Employee Schedule Requests and Manager Approval Process](#Employee-Schedule-Requests-and-Manager-Approval-Process)
-    - [Employee Schedule Building](#Employee-Schedule-Building)
+- [Business Profile](#owner-setting-up-business-profile-and-adding-departments.)
+- [Store Location Setup](#owner-setting-up-store-locations-and-hiring-managers-to-be-assigned-to-newly-created-store-locations.)
+- [Scheduling](#scheduling)
+    - [Employee Schedule Requests and Manager Approval Process](#employee-schedule-requests-and-manager-approval-process)
+    - [Employee Schedule Building](#employee-schedule-building)
 
 
 ### Owner Setting up business profile and adding departments.
