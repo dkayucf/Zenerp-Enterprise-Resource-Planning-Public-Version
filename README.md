@@ -27,4 +27,4 @@
 
 | Building Schedule | Schedule Notification |
 | ------ | ------ |
-|![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleBuilding.gif "Building Schedule")| ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleShiftTxt.gif "schedule notification") | 
+|![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduleBuilding.gif "Building Schedule")| ![alt text](https://raw.githubusercontent.com/dkayucf/Zenerp-Enterprise-Resource-Planning-Public-Version/master/public/img/gif/scheduledShiftTxt.gif "schedule notification") | 
