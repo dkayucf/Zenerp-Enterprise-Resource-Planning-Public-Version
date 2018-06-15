@@ -4,11 +4,14 @@
 
 Demo Users:
 - Owner: 
-    - Email: owner@test.com Password: abcd1234
+    - Email: owner@test.com 
+    - Password: abcd1234
 - Manager: 
-    - Email: manager@test.com Password: abcd1234
+    - Email: manager@test.com 
+    - Password: abcd1234
 - Employee: 
-    - Email: employee@test.com Password: abcd1234
+    - Email: employee@test.com 
+    - Password: abcd1234
 
 Table of Contents:
 - [Business Profile](#owner-setting-up-business-profile-and-adding-departments.)
