@@ -1,4 +1,11 @@
-# Zenerp-Enterprise-Resource-Planning-Public-Version
+# Zenerprise-Resource-Planning-Public-Version
+
+[Zenerprise](https://www.zenerprise.com)
+Demo Users:
+- Owner: Email: Owner@test.com Password:abcd1234
+- Manager: Email: Manager@test.com Password: abcd1234
+- Employee: Email: employee@test.com Password: abcd1234
+
 
 - [Business Profile](#owner-setting-up-business-profile-and-adding-departments.)
 - [Store Location Setup](#owner-setting-up-store-locations-and-hiring-managers-to-be-assigned-to-newly-created-store-locations.)
