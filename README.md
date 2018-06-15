@@ -13,7 +13,7 @@ Demo Users:
     - Email: employee@test.com 
     - Password: abcd1234
 
-Table of Contents:
+### Table of Contents:
 - [Business Profile](#owner-setting-up-business-profile-and-adding-departments.)
 - [Store Location Setup](#owner-setting-up-store-locations-and-hiring-managers-to-be-assigned-to-newly-created-store-locations.)
 - [Scheduling](#scheduling)
